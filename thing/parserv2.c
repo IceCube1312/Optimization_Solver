@@ -38,7 +38,7 @@ LP_MODEL* parse_into_CSR(FILE* mps){
 
     init_CSR_1(the_equation->matrix);
 
-    // --- Phase 1: Dimension Extraction ---
+    // Phase 1- Dimension extraction
     while(fgets(buffer,sizeof(buffer),mps)){
         if(strncmp(buffer,ROWS,4) == 0 ) { section = 1; continue; }
         else if(strncmp(buffer,COLUMNS,7) == 0) { section = 2; continue; }
